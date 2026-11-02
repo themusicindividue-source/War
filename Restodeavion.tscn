@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bpjhtcewjiasp"]
+
+[ext_resource type="Script" uid="uid://g5stkcb2m5h1" path="res://RstAvion.gd" id="1_r6j0t"]
+[ext_resource type="Texture2D" uid="uid://bj5am721jxrtg" path="res://Imagenes/New Piskel (11).png" id="2_7psnc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4t55"]
+size = Vector2(259, 151)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1119463584]
+script = ExtResource("1_r6j0t")
+
+[node name="NewPiskel(11)" type="Sprite2D" parent="." unique_id=976463356]
+position = Vector2(-34.999992, -30.999998)
+scale = Vector2(0.85, 0.85384613)
+texture = ExtResource("2_7psnc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1602676699]
+position = Vector2(0.5, -4.5)
+shape = SubResource("RectangleShape2D_h4t55")

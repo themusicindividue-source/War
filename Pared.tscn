@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://xheqqyekeopi"]
+
+[ext_resource type="Script" uid="uid://cilar88f213pd" path="res://pared.gd" id="1_7aj0b"]
+[ext_resource type="Texture2D" uid="uid://cixn3s77mtroj" path="res://Imagenes/png.png" id="1_yu0e7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4t55"]
+size = Vector2(495, 201)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7mgy"]
+size = Vector2(243, 254)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=138112037]
+script = ExtResource("1_7aj0b")
+
+[node name="Png" type="Sprite2D" parent="." unique_id=1373439433]
+position = Vector2(88, 59)
+texture = ExtResource("1_yu0e7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1268132652]
+position = Vector2(105.5, 97.5)
+shape = SubResource("RectangleShape2D_h4t55")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=748247890]
+position = Vector2(-15.5, -123)
+shape = SubResource("RectangleShape2D_w7mgy")

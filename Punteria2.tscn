@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://7omonutx0jg8"]
+
+[ext_resource type="Script" uid="uid://cxq3e2uwhix3s" path="res://Punteria.gd" id="1_pej3v"]
+[ext_resource type="Texture2D" uid="uid://774gcc5ioxhq" path="res://Imagenes/New Piskel (3).png" id="2_pej3v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h2tl"]
+size = Vector2(98, 131)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=652924252]
+script = ExtResource("1_pej3v")
+
+[node name="NewPiskel(3)" type="Sprite2D" parent="." unique_id=586549154]
+position = Vector2(35, 2)
+texture = ExtResource("2_pej3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1823595579]
+position = Vector2(1, 7.5)
+shape = SubResource("RectangleShape2D_8h2tl")

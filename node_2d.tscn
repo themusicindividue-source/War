@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://bgxs02spgagri"]
+
+[ext_resource type="Texture2D" uid="uid://d1ioagri3kluy" path="res://Imagenes/New Piskel (10).png" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://6crek73vp7tn" path="res://Objetivo.tscn" id="2_kdubu"]
+[ext_resource type="PackedScene" uid="uid://xheqqyekeopi" path="res://Pared.tscn" id="3_d21ai"]
+[ext_resource type="PackedScene" uid="uid://c74p5c5w6q8t" path="res://Blokes.tscn" id="4_rj586"]
+[ext_resource type="PackedScene" uid="uid://bktq5eg20vcar" path="res://Blockes.tscn" id="5_4d7sh"]
+[ext_resource type="Script" uid="uid://c5wan1qpa8unr" path="res://contador.gd" id="6_ir8iy"]
+
+[node name="Node2D" type="Node2D" unique_id=1224943425]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2073909876]
+position = Vector2(576, 320)
+
+[node name="NewPiskel(10)" type="Sprite2D" parent="." unique_id=986021569]
+position = Vector2(578, 323.5)
+scale = Vector2(1.2456896, 1.2329545)
+texture = ExtResource("1_wtcfe")
+
+[node name="StaticBody2D" parent="." unique_id=801741163 instance=ExtResource("2_kdubu")]
+position = Vector2(1263, 112)
+scale = Vector2(0.64, 0.64)
+
+[node name="Inicios" type="Node2D" parent="." unique_id=6924878]
+
+[node name="Marker2D" type="Marker2D" parent="Inicios" unique_id=952307764]
+position = Vector2(68.99999, 459.99997)
+scale = Vector2(-1.3927861, -26.436413)
+
+[node name="Marker2D2" type="Marker2D" parent="Inicios" unique_id=1081078634]
+position = Vector2(330, 250)
+
+[node name="Marker2D3" type="Marker2D" parent="Inicios" unique_id=1669182439]
+position = Vector2(900, 557)
+
+[node name="Destinos" type="Node2D" parent="." unique_id=174560345]
+
+[node name="Marker2D" type="Marker2D" parent="Destinos" unique_id=1656768603]
+position = Vector2(75, 189)
+
+[node name="Marker2D2" type="Marker2D" parent="Destinos" unique_id=333208491]
+position = Vector2(309, 594)
+
+[node name="Marker2D3" type="Marker2D" parent="Destinos" unique_id=982555788]
+position = Vector2(502, 210)
+
+[node name="Marker2D4" type="Marker2D" parent="Destinos" unique_id=1274270543]
+position = Vector2(672, 410)
+
+[node name="Marker2D5" type="Marker2D" parent="Destinos" unique_id=1356365587]
+position = Vector2(900, 384)
+
+[node name="Marker2D6" type="Marker2D" parent="Destinos" unique_id=1113410151]
+position = Vector2(944, 215)
+
+[node name="StaticBody2D3" parent="." unique_id=138112037 instance=ExtResource("3_d21ai")]
+position = Vector2(349, 341)
+rotation = -0.05237174
+scale = Vector2(0.72, 0.83999944)
+
+[node name="StaticBody2D2" parent="." unique_id=1446127730 instance=ExtResource("4_rj586")]
+position = Vector2(69, 452)
+
+[node name="StaticBody2D4" parent="." unique_id=629142087 instance=ExtResource("5_4d7sh")]
+position = Vector2(900, 557)
+scale = Vector2(0.76, 0.84)
+
+[node name="Contador" type="CanvasLayer" parent="." unique_id=1227986284 node_paths=PackedStringArray("spawner", "boton_reiniciar")]
+script = ExtResource("6_ir8iy")
+spawner = NodePath("")
+boton_reiniciar = NodePath("BotonReiniciar")
+
+[node name="EtiquetaTiempo" type="Label" parent="Contador" unique_id=38650329]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 64.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 46
+horizontal_alignment = 1
+
+[node name="EtiquetaMensaje" type="Label" parent="Contador" unique_id=1386132532]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonReiniciar" type="Button" parent="Contador" unique_id=2093472569]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -255.5
+offset_top = -173.0
+offset_right = 255.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 120
+text = "Reiniciar"
