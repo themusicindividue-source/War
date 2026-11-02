@@ -16,3 +16,4 @@ Juego 2D hecho en Godot en el que hay que disparar a los objetivos que salen de 
 2. Descarga o clona este repositorio.
 3. Abre Godot, pulsa Importar y elige el archivo `project.godot`.
 4. Ejecuta con F5.
+https://themusicindividue-source.itch.io/war
