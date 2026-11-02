@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c74p5c5w6q8t"]
+
+[ext_resource type="Texture2D" uid="uid://flfoajcdr0tg" path="res://Imagenes/png (1).png" id="1_fsg7i"]
+[ext_resource type="Script" uid="uid://06vpqehibjey" path="res://blokes.gd" id="1_q3bdx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
+size = Vector2(152, 344)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1446127730]
+script = ExtResource("1_q3bdx")
+
+[node name="Png(1)" type="Sprite2D" parent="." unique_id=1209756633]
+position = Vector2(86, 23)
+texture = ExtResource("1_fsg7i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1834617310]
+position = Vector2(9, 30)
+shape = SubResource("RectangleShape2D_8w0r3")

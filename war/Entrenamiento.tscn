@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://co7gw8ap553x1"]
+
+[ext_resource type="Texture2D" uid="uid://0hu8qwltsil" path="res://Imagenes/New Piskel (9).png" id="1_meval"]
+[ext_resource type="PackedScene" uid="uid://bldqgbbq2njc5" path="res://Punteria.tscn" id="2_vdva7"]
+[ext_resource type="Script" uid="uid://0ujuwysd8sf0" path="res://Spawner.gd" id="3_2cm8t"]
+[ext_resource type="PackedScene" uid="uid://b3mt7r6cik4m2" path="res://Cubierta.tscn" id="4_a18hl"]
+[ext_resource type="PackedScene" uid="uid://d38mlvk7amxnm" path="res://Cubiertaconhueco.tscn" id="5_gqlmc"]
+[ext_resource type="PackedScene" uid="uid://dtfli8vxtfv5i" path="res://Puntero.tscn" id="6_vdva7"]
+[ext_resource type="Script" uid="uid://c5wan1qpa8unr" path="res://contador.gd" id="7_2cm8t"]
+
+[node name="Node2D" type="Node2D" unique_id=2070381434]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=6076428]
+position = Vector2(1142, 635)
+zoom = Vector2(0.5, 0.5)
+
+[node name="NewPiskel(9)" type="Sprite2D" parent="." unique_id=217240947]
+position = Vector2(1153, 636)
+scale = Vector2(2.4892242, 2.4393938)
+texture = ExtResource("1_meval")
+
+[node name="StaticBody2D5" parent="." unique_id=652924252 node_paths=PackedStringArray("inicios", "destinos") instance=ExtResource("2_vdva7")]
+position = Vector2(2446, 181)
+script = ExtResource("3_2cm8t")
+escena_objetivo = ExtResource("2_vdva7")
+inicios = NodePath("../Inicio")
+destinos = NodePath("../Destinos")
+intervalo = 1.0
+duracion_movimiento = 1.0
+max_objetivos = 5
+cantidad_min = 1
+cantidad_max = 3
+
+[node name="Inicio" type="Node2D" parent="." unique_id=583626908]
+
+[node name="Marker2D" type="Marker2D" parent="Inicio" unique_id=564077529]
+position = Vector2(521, 589)
+
+[node name="Marker2D2" type="Marker2D" parent="Inicio" unique_id=831670503]
+position = Vector2(527, 760)
+
+[node name="Marker2D3" type="Marker2D" parent="Inicio" unique_id=967067836]
+position = Vector2(963, 898)
+
+[node name="Marker2D4" type="Marker2D" parent="Inicio" unique_id=513307628]
+position = Vector2(1374, 847)
+
+[node name="Marker2D5" type="Marker2D" parent="Inicio" unique_id=76595453]
+position = Vector2(1852, 763)
+
+[node name="Destinos" type="Node2D" parent="." unique_id=1424690876]
+
+[node name="Marker2D" type="Marker2D" parent="Destinos" unique_id=2087154040]
+position = Vector2(334, 592)
+
+[node name="Marker2D2" type="Marker2D" parent="Destinos" unique_id=696509271]
+position = Vector2(340, 743)
+
+[node name="Marker2D3" type="Marker2D" parent="Destinos" unique_id=1236496761]
+position = Vector2(991, 655)
+
+[node name="Marker2D4" type="Marker2D" parent="Destinos" unique_id=701538043]
+position = Vector2(726, 803)
+
+[node name="Marker2D5" type="Marker2D" parent="Destinos" unique_id=1908379974]
+position = Vector2(1348, 583)
+
+[node name="Marker2D6" type="Marker2D" parent="Destinos" unique_id=5133128]
+position = Vector2(1605, 774)
+
+[node name="Marker2D7" type="Marker2D" parent="Destinos" unique_id=27624859]
+position = Vector2(1848, 537)
+
+[node name="Marker2D8" type="Marker2D" parent="Destinos" unique_id=2078749145]
+position = Vector2(2136, 791)
+
+[node name="StaticBody2D" parent="." unique_id=1508611230 instance=ExtResource("4_a18hl")]
+position = Vector2(1843, 768)
+
+[node name="StaticBody2D2" parent="." unique_id=1960356272 instance=ExtResource("4_a18hl")]
+position = Vector2(1367, 852)
+rotation = -0.1194918
+
+[node name="StaticBody2D3" parent="." unique_id=806821053 instance=ExtResource("4_a18hl")]
+position = Vector2(966, 898)
+rotation = 0.17860363
+
+[node name="StaticBody2D4" parent="." unique_id=1620609595 instance=ExtResource("5_gqlmc")]
+position = Vector2(323, 672)
+
+[node name="Node2D" parent="." unique_id=38908751 instance=ExtResource("6_vdva7")]
+position = Vector2(1853, 461)
+
+[node name="Contador" type="CanvasLayer" parent="." unique_id=757546840 node_paths=PackedStringArray("spawner", "boton_reiniciar", "boton_siguiente")]
+script = ExtResource("7_2cm8t")
+spawner = NodePath("../StaticBody2D5")
+boton_reiniciar = NodePath("BotonReiniciar")
+boton_siguiente = NodePath("BotonSiguente")
+siguiente_nivel = "uid://cikhrb00ouiju"
+
+[node name="EtiquetaTiempo" type="Label" parent="Contador" unique_id=1065352015]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 64.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 46
+horizontal_alignment = 1
+
+[node name="EtiquetaMensaje" type="Label" parent="Contador" unique_id=378935867]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonReiniciar" type="Button" parent="Contador" unique_id=1013712477]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -173.0
+offset_right = 511.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 120
+text = "Reiniciar"
+
+[node name="BotonSiguente" type="Button" parent="Contador" unique_id=1950288999]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -605.0
+offset_top = -173.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 120
+text = "Siguente"

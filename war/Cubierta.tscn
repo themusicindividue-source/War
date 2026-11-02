@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b3mt7r6cik4m2"]
+
+[ext_resource type="Script" uid="uid://dtk0iq7g47u5e" path="res://Cubridor.gd" id="1_d8mud"]
+[ext_resource type="Texture2D" uid="uid://bc017j321fkg7" path="res://Imagenes/New Piskel (8).png" id="2_j1i88"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
+size = Vector2(337, 265)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1508611230]
+script = ExtResource("1_d8mud")
+
+[node name="NewPiskel(8)" type="Sprite2D" parent="." unique_id=1581859408]
+position = Vector2(22, 59)
+texture = ExtResource("2_j1i88")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=812062171]
+position = Vector2(5.5, 5.5)
+shape = SubResource("RectangleShape2D_8w0r3")

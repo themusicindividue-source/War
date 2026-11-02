@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dtfli8vxtfv5i"]
+
+[ext_resource type="Script" uid="uid://cdg5556c6acik" path="res://node_2d.gd" id="1_1qqls"]
+[ext_resource type="Texture2D" uid="uid://cf1cjwxn3dkrt" path="res://Imagenes/New Piskel (1).png" id="2_rpgr5"]
+
+[node name="Node2D" type="Node2D" unique_id=38908751]
+script = ExtResource("1_1qqls")
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="." unique_id=1326551385]
+position = Vector2(22, -3)
+scale = Vector2(0.63124996, 0.646875)
+texture = ExtResource("2_rpgr5")

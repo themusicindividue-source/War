@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://nocykdwspc52"]
+
+[ext_resource type="PackedScene" uid="uid://bldqgbbq2njc5" path="res://Punteria.tscn" id="1_gvuhb"]
+[ext_resource type="Script" uid="uid://dceqkr2oc7o5i" path="res://juego.gd" id="1_n74ki"]
+[ext_resource type="Texture2D" uid="uid://0hu8qwltsil" path="res://Imagenes/New Piskel (9).png" id="2_ipdbw"]
+[ext_resource type="PackedScene" uid="uid://b3mt7r6cik4m2" path="res://Cubierta.tscn" id="2_n74ki"]
+[ext_resource type="PackedScene" uid="uid://d38mlvk7amxnm" path="res://Cubiertaconhueco.tscn" id="4_xbmtn"]
+
+[node name="Entrenamiento" type="Node2D" unique_id=685469432]
+script = ExtResource("1_n74ki")
+
+[node name="NewPiskel(9)" type="Sprite2D" parent="." unique_id=2066771363]
+position = Vector2(575, 321)
+scale = Vector2(2.4719827, 2.4469697)
+texture = ExtResource("2_ipdbw")
+
+[node name="StaticBody2D" parent="." unique_id=652924252 instance=ExtResource("1_gvuhb")]
+position = Vector2(-8, 420)
+
+[node name="StaticBody2D3" parent="." unique_id=252362116 instance=ExtResource("1_gvuhb")]
+position = Vector2(913, 320)
+
+[node name="StaticBody2D4" parent="." unique_id=1620609595 instance=ExtResource("4_xbmtn")]
+position = Vector2(-109, 452)
+
+[node name="StaticBody2D2" parent="." unique_id=1508611230 instance=ExtResource("2_n74ki")]
+position = Vector2(1250, 431)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=213962194]
+position = Vector2(574, 320)
+zoom = Vector2(0.5, 0.5)

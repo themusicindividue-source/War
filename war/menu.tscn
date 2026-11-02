@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://dv3xlh4mqe73x"]
+
+[ext_resource type="Texture2D" uid="uid://duimn388sxu1b" path="res://Imagenes/unnamed (1).png" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://dqnbc0wlrxdsv" path="res://Scripts/menu.gd" id="1_ouk20"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w7mgy"]
+bg_color = Color(0.4627451, 0, 0, 0.5372549)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4e15o"]
+bg_color = Color(0.50980395, 0, 0, 0.5137255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
+bg_color = Color(0.93333334, 0, 0, 0.5294118)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
+bg_color = Color(0.6656343, 0, 0.0057265004, 0.63529414)
+
+[node name="Menu" type="Control" unique_id=476014976]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ouk20")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=195433309]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -9.0
+offset_right = 5.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lti8b")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1616824317]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 68.0
+offset_top = 64.0
+offset_right = -106.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+
+[node name="War" type="Button" parent="VBoxContainer" unique_id=915837922]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_w7mgy")
+text = "SOBREVIVIR"
+
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=1754932515]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_4e15o")
+text = "OPCIONES"
+
+[node name="!!!EXIT!!!" type="Button" parent="VBoxContainer" unique_id=838802644]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_mae5d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ouk20")
+text = "F U G A"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=3442220]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1561228902]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="VBoxContainer/War" to="." method="_on_war_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/!!!EXIT!!!" to="." method="_on_exit_pressed"]

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bldqgbbq2njc5"]
+
+[ext_resource type="Script" uid="uid://cxq3e2uwhix3s" path="res://Punteria.gd" id="1_fyomn"]
+[ext_resource type="Texture2D" uid="uid://d0cv4gi2wjroh" path="res://Imagenes/New Piskel (2).png" id="2_2v6h2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8w0r3"]
+radius = 74.10803
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=652924252]
+script = ExtResource("1_fyomn")
+
+[node name="NewPiskel(2)" type="Sprite2D" parent="." unique_id=879461514]
+position = Vector2(-7.0000153, -7.9999924)
+scale = Vector2(0.52307695, 0.50961536)
+texture = ExtResource("2_2v6h2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1823595579]
+shape = SubResource("CircleShape2D_8w0r3")

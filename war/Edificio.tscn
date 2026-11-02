@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dij82vqrjjn3"]
+
+[ext_resource type="Script" uid="uid://bobhyk1n155p6" path="res://edificio.gd" id="1_qg5nh"]
+[ext_resource type="Texture2D" uid="uid://bdnitjxeajpb1" path="res://Imagenes/New Piskel (5).png" id="1_vgrh8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4t55"]
+size = Vector2(239, 371)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1313064793]
+script = ExtResource("1_qg5nh")
+
+[node name="NewPiskel(5)" type="Sprite2D" parent="." unique_id=2101511944]
+position = Vector2(-126, 52)
+texture = ExtResource("1_vgrh8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1823763350]
+position = Vector2(14.5, 37.5)
+shape = SubResource("RectangleShape2D_h4t55")
